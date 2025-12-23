@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -63,30 +64,31 @@
 <div class="card">
   <h2>📘 BPSC</h2>
   <p>Chapter-wise clear notes</p>
-  <a href="upi.html" target="_blank">
-    <button onclick="playClick()">Buy ₹50</button>
+  <a href="upi.html" target="_blank" onclick="playClick()">
+    <button>Buy ₹50</button>
   </a>
 </div>
 
 <div class="card">
   <h2>📗 JAVA</h2>
   <p>Easy explanations</p>
-  <a href="upi.html" target="_blank">
-    <button onclick="playClick()">Buy ₹50</button>
+  <a href="upi.html" target="_blank" onclick="playClick()">
+    <button>Buy ₹50</button>
   </a>
 </div>
 
 <div class="card">
   <h2>📕 PYTHON</h2>
   <p>Full explanation notes</p>
-  <a href="upi.html" target="_blank">
-    <button onclick="playClick()">Buy ₹50</button>
+  <a href="upi.html" target="_blank" onclick="playClick()">
+    <button>Buy ₹50</button>
   </a>
 </div>
 
 <script>
 function playClick() {
-  var audio = new Audio('click.mp3'); // click.mp3 must be in the same folder
+  // Make sure click.mp3 is in the same folder as this index.html
+  var audio = new Audio('click.mp3');
   audio.play().catch(e => console.log("Audio error:", e));
 }
 </script>
