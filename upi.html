@@ -41,9 +41,17 @@
 <h2 style="color:#fff;">7992385304@fam</h2>
 <p>After payment, click “Done”</p>
 
-<a href="whatsapp.html" target="_blank">
+<a href="whatsapp.html" target="_blank" onclick="playClick()">
   <button>Done</button>
 </a>
+
+<script>
+function playClick() {
+  // Make sure click.mp3 is in the same folder as this file
+  var audio = new Audio('click.mp3');
+  audio.play().catch(e => console.log("Audio error:", e));
+}
+</script>
 
 </body>
 </html>
