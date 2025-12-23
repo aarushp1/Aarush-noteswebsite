@@ -1,61 +1,60 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<title>Study Notes</title>
+  <meta charset="UTF-8">
+  <title>My Study Notes</title>
+  <style>
+    body {
+      font-family: Arial;
+      background: linear-gradient(120deg,#89f7fe,#66a6ff);
+      text-align: center;
+      padding: 30px;
+      margin: 0;
+    }
 
-<style>
-body{
-  font-family: Arial;
-  background: linear-gradient(120deg,#89f7fe,#66a6ff);
-  text-align:center;
-  padding:30px;
-  margin:0;
-}
+    h1 { color: #fff; }
 
-.card{
-  background:white;
-  padding:30px 20px 40px 20px;
-  margin:20px auto;
-  width:300px;
-  border-radius:15px;
-  box-shadow:0 10px 25px rgba(0,0,0,0.2);
-  animation: fadeIn 1s ease;
-  display:flex;
-  flex-direction:column;
-  justify-content:space-between;
-}
+    .card {
+      background: white;
+      padding: 30px 20px 40px 20px;
+      margin: 20px auto;
+      width: 300px;
+      border-radius: 15px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+      animation: fadeIn 1s ease;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
 
-h1{color:#fff;}
+    button {
+      background: linear-gradient(45deg,#ff512f,#dd2476);
+      color: white;
+      border: none;
+      padding: 12px 25px;
+      font-size: 16px;
+      border-radius: 30px;
+      cursor: pointer;
+      box-shadow: 0 6px #b31b52;
+      transition: 0.2s;
+      margin-top: 15px;
+    }
 
-button{
-  background:linear-gradient(45deg,#ff512f,#dd2476);
-  color:white;
-  border:none;
-  padding:12px 25px;
-  font-size:16px;
-  border-radius:30px;
-  cursor:pointer;
-  box-shadow:0 6px #b31b52;
-  transition:0.2s;
-  margin-top:15px;
-}
+    button:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 10px #b31b52;
+    }
 
-button:hover{
-  transform:translateY(-3px);
-  box-shadow:0 10px #b31b52;
-}
+    button:active {
+      transform: translateY(3px);
+      box-shadow: 0 3px #b31b52;
+    }
 
-button:active{
-  transform:translateY(3px);
-  box-shadow:0 3px #b31b52;
-}
-
-@keyframes fadeIn{
-  from{opacity:0; transform:translateY(20px);}
-  to{opacity:1; transform:translateY(0);}
-}
-</style>
-
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
 </head>
 <body>
 
@@ -65,7 +64,7 @@ button:active{
   <h2>📘 BPSC</h2>
   <p>Chapter-wise clear notes</p>
   <a href="upi.html" target="_blank">
-    <button onclick="var audio = new Audio('click.mp3'); audio.play();">Buy ₹50</button>
+    <button onclick="playClick()">Buy ₹50</button>
   </a>
 </div>
 
@@ -73,7 +72,7 @@ button:active{
   <h2>📗 JAVA</h2>
   <p>Easy explanations</p>
   <a href="upi.html" target="_blank">
-    <button onclick="var audio = new Audio('click.mp3'); audio.play();">Buy ₹50</button>
+    <button onclick="playClick()">Buy ₹50</button>
   </a>
 </div>
 
@@ -81,9 +80,16 @@ button:active{
   <h2>📕 PYTHON</h2>
   <p>Full explanation notes</p>
   <a href="upi.html" target="_blank">
-    <button onclick="var audio = new Audio('click.mp3'); audio.play();">Buy ₹50</button>
+    <button onclick="playClick()">Buy ₹50</button>
   </a>
 </div>
+
+<script>
+function playClick() {
+  var audio = new Audio('click.mp3'); // click.mp3 must be in the same folder
+  audio.play().catch(e => console.log("Audio error:", e));
+}
+</script>
 
 </body>
 </html>
